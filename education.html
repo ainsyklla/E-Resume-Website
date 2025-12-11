@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 110px;
+            background-color: #DCDCDC; 
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+            color: #000000;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+            color: #000000;
+        }
+
+        nav a:visited {
+            color: #000000;
+        }
+
+        .education-wrapper {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .education-wrapper h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #000;
+        }
+
+        #education-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            #education-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            #education-cards {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .education-card {
+            background-color: #fff;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border-left: 5px solid #000000;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image-placeholder {
+            height: 120px;
+            background-color: #f0f8ff;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .card-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .card-header {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 6px;
+        }
+
+        .school-name {
+            color: #808080;
+            font-weight: bold;
+        }
+
+        .card-period {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .visit-website-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background-color: #0000CD;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .visit-website-btn:hover {
+            background-color: #808080;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .footer-info {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .footer-info p {
+            margin: 5px 0;
+        }
+        .last-updated {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<!-- ---------------- HEADER CENTER ---------------- -->
+<header>
+    <nav>
+        <a href="education.html">Education</a>
+
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="achievement.html">Achievement</a>
+            <a href="contact.html">Contacts</a>
+        </nav>
+    </header>
+
+    <div class="education-wrapper">
+        <h2>Steps in My Education</h2>
+        
+        <div id="education-cards">
+            
+            <!-- UiTM Kedah -->
+            <div class="education-card">
+                <div class="card-image-placeholder">
+                    <img src="education3.jpg" alt="UiTM Kedah Logo">
+                </div>
+                <div class="card-header school-name">
+                    UiTM Cawangan Kedah Kampus Sungai Petani
+                </div>
+                <p class="card-period">2023 - Current | Bachelor of Information Science (Hons) Library Management</p>
+                <a href="https://kedah.uitm.edu.my/" target="_blank" class="visit-website-btn">Visit Website</a>
+            </div>
+            
+            <!-- SMK Tengku Indra Petra -->
+            <div class="education-card">
+                <div class="card-image-placeholder">
+                    <img src="education2.jpg" alt="STPM Logo">
+                </div>
+                <div class="card-header school-name">Sekolah Menengah Kebangsaan Tengku Indra Petra</div>
+                <p class="card-period">2021 - 2023 | Science Social</p>
+                <a href="https://www.facebook.com/SMKTIP1" target="_blank" class="visit-website-btn">Visit Website</a>
+            </div>
+            
+            <!-- SMK Tengku Bendahara -->
+            <div class="education-card">
+                <div class="card-image-placeholder">
+                    <img src="education1.jpg" alt="SMK Tengku Bendahara Logo">
+                </div>
+                <div class="card-header school-name">Sekolah Menengah Kebangsaan Tengku Bendahara</div>
+                <p class="card-period">2016 - 2020 | Aliran Sains Tulen (Pure Science Stream)</p>
+                <a href="https://www.facebook.com/smktbguamusang/mentions/" target="_blank" class="visit-website-btn">Visit Website</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>🌐 Recommended: Latest Chrome, Firefox, or Edge</p>
+            <p class="last-updated">📅 Last Updated: 06 December 2025</p>
+        </div>
+        <p>&copy; 2025 NurAin Syakilla. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

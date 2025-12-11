@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DCDCDC;
+        }
+
+        /* --- Header Centered --- */
+        header {
+            position: fixed;   
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #FFFFFF;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* logo atas, menu bawah */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px; /* jarak antara logo & menu */
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 160px 30px 30px 30px; 
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* --- Dropdown Styles --- */
+        .dropdown {
+            margin-bottom: 20px;
+        }
+
+        .dropdown button {
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .dropdown button:hover {
+            background-color: #333333;
+        }
+
+        .dropdown-content {
+            display: none;
+            margin-top: 5px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .dropdown-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #333333;
+        }
+
+        .referee-detail {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .referee-detail strong {
+            display: inline-block;
+            width: 120px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .footer-info {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-btn {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background: #333;
+            color: #fff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .social-btn:hover {
+            transform: scale(1.2) translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .social-btn.thread:hover { background: #1DA1F2; }
+        .social-btn.linkedin:hover { background: #0A66C2; }
+        .social-btn.instagram:hover { 
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                font-size: 12px;
+            }
+            .social-btn {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="achievement.html">Achievement</a>
+            <a href="contact.html">Contacts</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+
+        <!-- Dropdown Contact Section -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('message-dropdown')">Send a Message</button>
+            <div id="message-dropdown" class="dropdown-content">
+                <form action="submit_form.php" method="POST"> 
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleDropdown('references-dropdown')">References</button>
+            <div id="references-dropdown" class="dropdown-content">
+                <div class="referee-detail">
+                    <strong>Referee 1:</strong> MAHADI BIN MAHMOOD
+                </div>
+                <div class="referee-detail">
+                    <strong>Contact:</strong> mahadi147@uitm.edu.my
+                </div>
+                <div class="referee-detail">
+                    <strong>Phone Number:</strong> 04-456 2605
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-icons">
+            <a href="https://www.threads.com/@ainsyklla" target="_blank" class="social-btn thread"><i class="fab fa-thread"></i></a>
+            <a href="https://www.linkedin.com/in/nurain-syakilla-54144b203" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/ainsyklla/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>🌐 Recommended: Latest Chrome, Firefox, or Edge</p>
+            <p class="last-updated">📅 Last Updated: 06 December 2025</p>
+        </div>
+        <center>
+            <p>&copy; 2025 NurAin Syakilla. All rights reserved.</p>
+        </center>
+    </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            var element = document.getElementById(id);
+            element.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

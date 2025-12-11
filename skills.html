@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DCDCDC;
+        }
+
+        /* ====================== HEADER CENTER ====================== */
+        header {
+            background-color: #FFFFFF;
+            padding: 20px;
+            text-align: center; /* CENTER */
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav {
+            width: 100%;
+            text-align: center; /* CENTER */
+        }
+
+        /* =================== BIRU → HITAM =================== */
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000000; /* BLACK */
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #000000; /* BLACK */
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #000000; /* BLACK */
+            font-weight: bold;
+        }
+
+        /* Dropdown content */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .skills-container {
+            max-width: 700px;
+            margin: 40px auto 20px auto;
+            padding: 20px;
+        }
+
+        .skills-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .skill-card {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            border-left: 5px solid #000000;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skill-category-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #808080;
+        }
+
+        .skill-level {
+            font-weight: bold;
+            color: #2F4F4F;
+            background-color: #e6ffe6;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .tools-list {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            list-style: disc;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .audio-container {
+            max-width: 700px;
+            margin: 20px auto 40px auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .audio-container p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .audio-container audio {
+            width: 80%;
+            min-width: 250px;
+            max-width: 450px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            box-shadow: 0 -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-info {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        
+        <!-- Skills Dropdown -->
+        <span class="dropdown" style="position:relative; display:inline-block;">
+            <a href="skills.html" class="dropbtn" style="color:#000; text-decoration:none; margin:0 10px; cursor:pointer;">Skills ▼</a>
+            <div class="dropdown-content" style="display:none; position:absolute; background-color:#fff; min-width:180px; box-shadow:0 8px 16px rgba(0,0,0,0.2); z-index:1; text-align:left; border-radius:5px;">
+                <a href="#programming" style="display:block; padding:10px 15px; color:#000; text-decoration:none;">Programming & Markup</a>
+                <a href="#library" style="display:block; padding:10px 15px; color:#000; text-decoration:none;">Library Management Systems</a>
+                <a href="#productivity" style="display:block; padding:10px 15px; color:#000; text-decoration:none;">Productivity & Design</a>
+                <a href="#softskills" style="display:block; padding:10px 15px; color:#000; text-decoration:none;">Soft Skills</a>
+                <a href="#audio" style="display:block; padding:10px 15px; color:#000; text-decoration:none;">Audio</a>
+            </div>
+        </span>
+
+        <a href="achievement.html">Achievement</a>
+        <a href="contact.html">Contacts</a>
+    </nav>
+</header>
+
+<div class="skills-container">
+    <h2>Technical & Interpersonal Skills</h2>
+
+    <div id="programming" class="skill-card">
+        <div class="skill-header">
+            <span class="skill-category-title">Programming & Markup</span>
+            <span class="skill-level">Basic</span>
+        </div>
+        <ul class="tools-list">
+            <li>HTML, CSS</li>
+            <li>JavaScript (Basic)</li>
+            <li>Power BI</li>
+        </ul>
+    </div>
+
+    <div id="library" class="skill-card">
+        <div class="skill-header">
+            <span class="skill-category-title">Library Management Systems</span>
+            <span class="skill-level">Basic</span>
+        </div>
+        <ul class="tools-list">
+            <li>MARC21</li>
+            <li>KOHA</li>
+            <li>Dublin Core</li>
+        </ul>
+    </div>
+
+    <div id="productivity" class="skill-card">
+        <div class="skill-header">
+            <span class="skill-category-title">Productivity & Design</span>
+            <span class="skill-level">Intermediate</span>
+        </div>
+        <ul class="tools-list">
+            <li>Microsoft Office</li>
+            <li>Canva</li>
+            <li>CapCut</li>
+        </ul>
+    </div>
+
+    <div id="softskills" class="skill-card">
+        <div class="skill-header">
+            <span class="skill-category-title">Soft Skills</span>
+            <span class="skill-level">Excellent</span>
+        </div>
+        <ul class="tools-list">
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+        </ul>
+    </div>
+</div>
+
+<div id="audio" class="audio-container">
+    <p>here is my speaking audio </p>
+    <audio controls>
+        <source src="audio/audio.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<footer>
+    <div class="footer-info">
+        <p>🌐 Recommended: Latest Chrome, Firefox, or Edge</p>
+        <p class="last-updated">📅 Last Updated: 06 December 2025</p>
+    </div>
+    <p>&copy; 2025 NurAin Syakilla. All rights reserved.</p>
+</footer>
+
+<script>
+    // Dropdown toggle
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropBtn.addEventListener('click', function(event){
+        event.preventDefault();
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Tutup dropdown kalau klik di luar
+    window.addEventListener('click', function(e){
+        if (!dropBtn.contains(e.target)) {
+            dropdownContent.style.display = 'none';
+        }
+    });
+
+    // Smooth scroll untuk anchor
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e){
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target){
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                dropdownContent.style.display = 'none'; // tutup dropdown
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+

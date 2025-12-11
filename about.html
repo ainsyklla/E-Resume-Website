@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DCDCDC;
+            scroll-behavior: smooth;
+            padding-top: 100px; /* Beri ruang untuk header statik */
+        }
+
+        /* ---------------- HEADER CENTER ---------------- */
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Header statik */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        nav a.active {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 5px;
+        }
+
+        .dropdown-menu a {
+            color: #000;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .main-content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .resume-image-space {
+            flex: 1;
+            min-width: 300px;
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed #ccc;
+            text-align: center;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .resume-image-space img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            cursor: zoom-in;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .profile-table th,
+        .profile-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .profile-table th {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .profile-photo-cell img {
+            width: 50%;
+            height: auto;
+            border-bottom-left-radius: 10px;
+            cursor: zoom-in;
+        }
+
+        .experience-content-cell {
+            padding-left: 15px;
+            vertical-align: top;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .video-cell {
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-content-wrapper {
+                flex-direction: column;
+            }
+            body {
+                padding-top: 160px; /* Sesuaikan ruang header mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ---------------- HEADER CENTER ---------------- -->
+<header>
+   <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <ul class="navbar-nav">
+
+        <a href="home.html">Home</a>
+
+        <!-- About dropdown -->
+        <div class="dropdown d-inline">
+            <a class="dropdown-toggle" href="about.html" id="aboutDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <a class="dropdown-item" href="#experience">Experience</a>
+                <a class="dropdown-item" href="#socialmedia">Social Media</a>
+                <a class="dropdown-item" href="#videoshowcase">Video Showcase</a>
+            </div>
+        </div>
+
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="contact.html">Contacts</a>
+    </nav>
+</header>
+
+<!------------------- MAIN CONTENT ------------------->
+<div class="main-content-wrapper">
+
+    <div class="profile-container">
+        <table class="profile-table">
+
+            <tr id="experience">
+                <th colspan="2">School Experience</th>
+            </tr>
+
+            <tr>
+                <td class="profile-photo-cell">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-imgsrc="img/profile.jpg">
+                        <img src="profile.jpg" alt="My Photo">
+                    </a>
+                </td>
+
+                <td class="experience-content-cell">
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Participated in Young Doctors Club camping programs</li>
+                        <li>Master of Ceremonies for school assemblies</li>
+                        <li>Represented school in netball competitions</li>
+                        <li>Competed in Puteri Islam Uniform Unit Log Book competition</li>
+                        <li>Volunteered in dengue patrol activities</li>
+                        <li>Took part in the Young Doctors Club Intervention Project competition</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr id="socialmedia">
+                <th colspan="2">Social Media</th>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <p>Hey it's me! Check Me Out on:</p>
+                    <ul>
+                        <li><a href="https://www.instagram.com/ainsyklla" target="_blank">Instagram</a></li>
+                        <li><a href="http://linkedin.com/in/nurain-syakilla-54144b203" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr id="videoshowcase">
+                <th colspan="2">Video Showcase</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="video-cell">
+                    <p>A brief showcase about me:</p>
+                    <video controls>
+                        <source src="video/aboutme.mp4" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+<!------------------- FOOTER ------------------->
+<footer>
+    <p>🌐 Recommended: Latest Chrome, Firefox, or Edge</p>
+    <p>📅 Last Updated: 06 December 2025</p>
+    <p>&copy; 2025 NurAin Syakilla. All rights reserved.</p>
+</footer>
+
+<!------------------- MODAL IMAGE ZOOM ------------------->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content" style="background: transparent; border: none;">
+            <div class="modal-body" data-dismiss="modal" style="text-align: center;">
+                <img id="modalImage" src="" style="max-width: 100%; max-height: 80vh;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Modal image zoom
+    $('#imageModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
